@@ -1,0 +1,100 @@
+/* 全体の背景色をグレーに設定 */
+body.search-page {
+    background-color: #808080;  /* 背景色をグレーに */
+    font-family: Arial, sans-serif;  /* フォントをArialに設定 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* フォームコンテナのスタイル */
+.form-container1 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* 更新情報のタイトルスタイル */
+.form-container1 p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* エラーメッセージのスタイル */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* 入力フォームのラベルと入力フィールドのスタイル */
+.form-container1 label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* 入力フォームのスタイル */
+.form-container1 input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* フォームがフォーカスされた時の入力フィールド */
+.form-container1 input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* 更新ボタンのスタイル */
+button[type="submit"] {
+    background-color: #4CAF50;  /* 緑色のボタン */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* 更新ボタンのホバー時 */
+button[type="submit"]:hover {
+    background-color: #45a049;  /* ホバー時に少し暗く */
+}
+
+/* 戻るボタンのスタイル */
+.back-button {
+    background-color: #f44336;  /* 赤色のボタン */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* 戻るボタンのホバー時 */
+.back-button:hover {
+    background-color: #e53935;  /* ホバー時に少し暗く */
+}
