@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>削除画面</title>
+    <!-- search.jsp と同じ CSS ファイルをリンク -->
+    <link href="css/commonssearch.css" rel="stylesheet">
+</head>
+<body class="search-page"> <!-- 'search-page' クラスを適用 -->
+
+    <div class="form-container1"> <!-- 'form-container1' クラスを適用 -->
+        <p>削除する商品のIDを入力してください</p>
+
+        <!-- エラーメッセージを表示 -->
+        <c:if test="${not empty errorMessage}">
+             <p style="color: red;">${errorMessage}</p>
+        </c:if>
+
+        <form:form action="/deleteItem" method="post" modelAttribute="deleteForm">
+            <div>
+                <label class="required">ID</label>
+                <form:input path="deleteProductsId" />
+                <form:errors path="deleteProductsId" cssClass="error" />
+            </div>
+            
+            <button type="submit">削除</button>
+        </form:form>
+
+        <div>
+            <button class="back-button" onclick="location.href='/menu'" type="button">戻る</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
